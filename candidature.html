@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Candidature Staff & Joueur - Questionnaire</title>
+<style>
+  body {
+    background: #2c2f33;
+    font-family: Arial, sans-serif;
+    color: #eee;
+    margin: 0;
+    padding: 20px;
+  }
+  h1, h2 {
+    text-align: center;
+    color: #7289da;
+  }
+  form {
+    max-width: 700px;
+    margin: auto;
+    background: #23272a;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #7289daaa;
+  }
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    background: #40444b;
+    color: #eee;
+    resize: vertical;
+  }
+  textarea {
+    min-height: 80px;
+  }
+  button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 7px;
+    background-color: #7289da;
+    color: white;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #5b6eae;
+  }
+  small {
+    color: #99aab5;
+  }
+</style>
+</head>
+<body>
+
+<h1>📄 Candidature pour rejoindre l'équipe Staff & Joueur</h1>
+
+<form action="#" method="POST">
+
+  <h2>🛡️ Candidature Staff</h2>
+
+  <label for="nom_staff">Nom (facultatif), prénom :</label>
+  <input type="text" id="nom_staff" name="nom_staff" placeholder="Ton nom ou pseudonyme" />
+
+  <label for="age_staff">Âge :</label>
+  <input type="number" id="age_staff" name="age_staff" min="13" max="100" required />
+
+  <label for="pseudo_staff">Pseudo Discord :</label>
+  <input type="text" id="pseudo_staff" name="pseudo_staff" required />
+
+  <label for="dispo_staff">Tes disponibilités :</label>
+  <textarea id="dispo_staff" name="dispo_staff" required placeholder="Par exemple : soir en semaine, week-ends, etc."></textarea>
+
+  <label for="motivation_staff">🎯 Pourquoi souhaites-tu devenir staff ?</label>
+  <textarea id="motivation_staff" name="motivation_staff" required placeholder="Petit paragraphe de 3-4 lignes"></textarea>
+
+  <label for="experience_staff">🛠️ Tes expériences en tant que staff :</label>
+  <textarea id="experience_staff" name="experience_staff" required></textarea>
+
+  <label for="qualites_defauts">💡 Tes qualités / défauts :</label>
+  <textarea id="qualites_defauts" name="qualites_defauts" required></textarea>
+
+  <label for="apport_staff">🚧 Ce que tu peux apporter au serveur :</label>
+  <textarea id="apport_staff" name="apport_staff" required placeholder="Minimum 5 lignes"></textarea>
+
+  <hr style="margin: 30px 0; border-color: #7289da88;" />
+
+  <h2>🎮 Candidature Joueur Rocket League</h2>
+
+  <label for="presentation_joueur">Une présentation rapide de toi :</label>
+  <textarea id="presentation_joueur" name="presentation_joueur" required></textarea>
+
+  <label for="infos_rl">Informations Rocket League (rank 1v1, 2v2, 3v3, peak, points forts, points faibles) :</label>
+  <textarea id="infos_rl" name="infos_rl" required></textarea>
+
+  <label for="experience_joueur">Ton expérience en tant que joueur :</label>
+  <textarea id="experience_joueur" name="experience_joueur" required></textarea>
+
+  <label for="dispo_joueur">Tes disponibilités (lundi au dimanche) :</label>
+  <textarea id="dispo_joueur" name="dispo_joueur" required></textarea>
+
+  <label for="apport_joueur">Ce que tu peux apporter à la structure :</label>
+  <textarea id="apport_joueur" name="apport_joueur" required></textarea>
+
+  <label for="objectifs_joueur">Tes objectifs dans la structure :</label>
+  <textarea id="objectifs_joueur" name="objectifs_joueur" required></textarea>
+
+  <hr style="margin: 30px 0; border-color: #7289da88;" />
+
+  <h2>🧠 Mise en situation – Réflexion et comportement</h2>
+
+  <!-- Scénario 1 -->
+  <label for="scenar1_reaction"><strong>Scénario 1 :</strong> Un membre critique publiquement le staff dans un canal général, en disant que les modos sont inutiles. Que fais-tu ?</label>
+  <select id="scenar1_reaction" name="scenar1_reaction" required>
+    <option value="">-- Sélectionnez une réponse --</option>
+    <option value="sanction">Je supprime son message et le sanctionne immédiatement.</option>
+    <option value="public_reply">Je réponds publiquement pour défendre le staff, sans sanctionner.</option>
+    <option value="privately_contact">Je le contacte en privé pour comprendre sa frustration.</option>
+  </select>
+
+  <label for="scenar1_justification">Explique pourquoi tu as choisi cette option :</label>
+  <textarea id="scenar1_justification" name="scenar1_justification" rows="4" required></textarea>
+
+  <!-- Scénario 2 -->
+  <label for="scenar2_reaction"><strong>Scénario 2 :</strong> Un membre publie une blague raciste dans #memes en disant que "c’est de l’humour". Certains rigolent, d'autres sont choqués. Que fais-tu ?</label>
+  <select id="scenar2_reaction" name="scenar2_reaction" required>
+    <option value="">-- Sélectionnez une réponse --</option>
+    <option value="delete_warn">Je supprime la blague et j’émets un avertissement.</option>
+    <option value="debate">J’ouvre un débat pour voir la réaction de la communauté.</option>
+    <option value="staff_alert">Je fais remonter au staff sans agir moi-même.</option>
+  </select>
+
+  <label for="scenar2_justification">Explique pourquoi tu as choisi cette option :</label>
+  <textarea id="scenar2_justification" name="scenar2_justification" rows="4" required></textarea>
+
+  <!-- Scénario 3 -->
+  <label for="scenar3_reaction"><strong>Scénario 3 :</strong> Tu soupçonnes qu’un autre modérateur utilise un double compte pour troller anonymement. Tu n’as pas de preuve, mais beaucoup d’indices. Que fais-tu ?</label>
+  <select id="scenar3_reaction" name="scenar3_reaction" required>
+    <option value="">-- Sélectionnez une réponse --</option>
+    <option value="confront">Je le confronte en privé pour lui dire ce que je pense.</option>
+    <option value="collect_proof">Je rassemble plus de preuves et je prépare un rapport au staff.</option>
+    <option value="ignore">Je laisse couler, ce n’est pas mon problème direct.</option>
+  </select>
+
+  <label for="scenar3_justification">Explique pourquoi tu as choisi cette option :</label>
+  <textarea id="scenar3_justification" name="scenar3_justification" rows="4" required></textarea>
+
+  <button type="submit">📨 Envoyer ma candidature</button>
+</form>
+
+</body>
+</html>
